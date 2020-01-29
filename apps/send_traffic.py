@@ -17,7 +17,7 @@ MN_PATH='~/mininet'
 MN_UTIL=os.path.join(MN_PATH, 'util', 'm')
 
 CmdMemcachedClient = {
-	'start': 'python memcached_client.py {start_time} {host_name} {traffic_file} > logs/{host_name}_mc.log 2>/dev/null &',
+	'start': 'python ./apps/memcached_client.py {start_time} {host_name} {traffic_file} > ./logs/{host_name}_mc.log 2>/dev/null &',
 	'kill': 'sudo pkill "python memcached_client.py" 2>/dev/null'
 }
 
@@ -27,7 +27,7 @@ CmdMemcachedServer = {
 }
 
 CmdIperfClient = {
-	'start': 'python iperf_client.py {start_time} {host_name} {traffic_file} > logs/{host_name}_iperf.log 2>/dev/null &',
+	'start': 'python ./apps/iperf_client.py {start_time} {host_name} {traffic_file} > ./logs/{host_name}_iperf.log 2>/dev/null &',
 	'kill': 'sudo pkill "python iperf_client.py" 2>/dev/null'
 }
 
