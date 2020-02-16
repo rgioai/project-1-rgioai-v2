@@ -1,0 +1,19 @@
+CS 145 - Project 1
+
+The rules in controller/controller_circle.py for now just represent entries in a table telling
+each switch where to find each host. When h1 tries to communicate with h3, it sends a packet to
+the nearest switch (s1 in this case), and s1 has a record of where to find h3 and routes the
+packet accordingly.
+
+
+Evaluation Output:
+
+start iperf and memcached servers
+wait 1 sec for iperf and memcached servers to start
+start iperf and memcached clients
+wait for experiment to finish
+stop everything
+wait 10 sec to make log flushed
+Average latency of Memcached Requests: 335.399201377 (us)
+Average log(latency) of Memcached Requests: 1.36295078215
+-1.36295078215
